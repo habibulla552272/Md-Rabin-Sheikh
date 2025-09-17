@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Trophy, Play, Star } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 interface HeroSectionProps {
   language: "en" | "bn"
@@ -28,7 +29,8 @@ export function HeroSection({ language }: HeroSectionProps) {
       badge: "এশিয়া বুক অফ রেকর্ডস",
       title: "মোঃ রবিন শেখের সাথে পরিচিত হন",
       subtitle: "এশিয়ার পুশ-আপ রেকর্ড ধারক",
-      description: "১৭ বছর ৬ মাস বয়সে ৩০ সেকেন্ডে ৬৯টি পুশ-আপ সম্পন্ন করে গ্র্যান্ড মাস্টার উপাধি অর্জনকারী তরুণ বাংলাদেশি ক্রীড়াবিদ।",
+      description:
+        "১৭ বছর ৬ মাস বয়সে ৩০ সেকেন্ডে ৬৯টি পুশ-আপ সম্পন্ন করে গ্র্যান্ড মাস্টার উপাধি অর্জনকারী তরুণ বাংলাদেশি ক্রীড়াবিদ।",
       cta: "রেকর্ড প্রচেষ্টা দেখুন",
       stats: [
         { number: "৬৯", label: "পুশ-আপ" },
@@ -40,7 +42,7 @@ export function HeroSection({ language }: HeroSectionProps) {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with overlay */}
+      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
 
       <div className="container mx-auto px-4 py-20 relative z-10">
@@ -80,10 +82,12 @@ export function HeroSection({ language }: HeroSectionProps) {
 
             {/* CTA Button */}
             <div className="flex justify-center lg:justify-start">
-              <Button size="lg" className="text-lg px-8 py-6 group">
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                {content[language].cta}
-              </Button>
+              <Link href="/video">
+                <Button size="lg" className="text-lg px-8 py-6 group">
+                  <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                  {content[language].cta}
+                </Button>
+              </Link>
             </div>
           </div>
 

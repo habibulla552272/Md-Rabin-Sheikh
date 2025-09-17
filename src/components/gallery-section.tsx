@@ -35,42 +35,42 @@ export function GallerySection({ language }: GallerySectionProps) {
     {
       id: 1,
       category: "certificates",
-      image: "/images/certificate.png",
+      image: "/images/certificate.jpg",
       title: language === "en" ? "Asia Book of Records Certificate" : "এশিয়া বুক অফ রেকর্ডস সার্টিফিকেট",
       description: language === "en" ? "Official Grand Master certificate" : "অফিসিয়াল গ্র্যান্ড মাস্টার সার্টিফিকেট",
     },
     {
       id: 2,
       category: "training",
-      image: "/images/rabin-profile.png",
+      image: "/images/profile.jpg",
       title: language === "en" ? "Training Session" : "প্রশিক্ষণ সেশন",
       description: language === "en" ? "Dedicated fitness training" : "নিবেদিত ফিটনেস প্রশিক্ষণ",
     },
     {
       id: 3,
       category: "training",
-      image: "/young-athlete-doing-push-ups-outdoors.jpg",
+      image: "/gallery.jpg",
       title: language === "en" ? "Push-up Practice" : "পুশ-আপ অনুশীলন",
       description: language === "en" ? "Daily push-up routine" : "দৈনিক পুশ-আপ রুটিন",
     },
     {
       id: 4,
       category: "events",
-      image: "/arm-wrestling-competition-bangladesh.jpg",
+      image: "/gallery1.jpg",
       title: language === "en" ? "Arm Wrestling Competition" : "আর্ম রেসলিং প্রতিযোগিতা",
       description: language === "en" ? "Local tournament victory" : "স্থানীয় টুর্নামেন্ট বিজয়",
     },
     {
       id: 5,
       category: "events",
-      image: "/fitness-award-ceremony-bangladesh.jpg",
+      image: "/gallery2.jpg",
       title: language === "en" ? "Award Ceremony" : "পুরস্কার বিতরণী",
       description: language === "en" ? "Recognition event" : "স্বীকৃতি অনুষ্ঠান",
     },
     {
       id: 6,
       category: "training",
-      image: "/gym-workout-session-bangladesh-athlete.jpg",
+      image: "/gallery.jpg",
       title: language === "en" ? "Gym Session" : "জিম সেশন",
       description: language === "en" ? "Strength training" : "শক্তি প্রশিক্ষণ",
     },
@@ -99,10 +99,10 @@ export function GallerySection({ language }: GallerySectionProps) {
         {/* Gallery Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {galleryItems.map((item) => (
-            <Card key={item.id} className="group overflow-hidden hover:shadow-xl transition-all duration-300">
+            <Card key={item.id} className="group overflow-hidden hover:shadow-xl transition-all duration-300 py-0">
               <div className="relative overflow-hidden">
                 <Image
-                  src={item.image || "/placeholder.svg"}
+                  src={item.image}
                   alt={item.title}
                   width={400}
                   height={300}
